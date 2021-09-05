@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login_in = findViewById(R.id.login_in);
@@ -31,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
         forget_password = findViewById(R.id.forget_password);
         forget_password.setOnClickListener(new SecondClickListener());
         hello_world = findViewById(R.id.hello_world);
-
     }
-
     class MyOnClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view){
@@ -43,12 +40,9 @@ public class MainActivity extends AppCompatActivity {
             }
             Toast.makeText(MainActivity.this,"Welcome,"+username.getText(),Toast.LENGTH_SHORT).show();
             hello_world.animate().rotationBy(180).start();
-            hello_world.animate().alpha(0).setDuration(1000).start();
-
+            hello_world.animate().alpha(0).setDuration(10000).start();
         }
-
     }
-
     class SecondClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
@@ -56,9 +50,4 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-
-
-
-
 }
