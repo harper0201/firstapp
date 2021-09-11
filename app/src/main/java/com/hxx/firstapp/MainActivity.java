@@ -13,12 +13,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    //prepare necessary components for all pages
     EditText username,password;
     Button login_in;
     TextView forget_password;
     TextView hello_world;
     Intent intent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         forget_password.setOnClickListener(new SecondClickListener());
         hello_world = findViewById(R.id.hello_world);
     }
+
+    // make login_in button works
+    // error handling about invalid input
+    // pratice some simple animation
+
     class MyOnClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view){
@@ -43,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             hello_world.animate().alpha(0).setDuration(10000).start();
         }
     }
+
+    // make "forget password" clickable which can jump into another page
     class SecondClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {

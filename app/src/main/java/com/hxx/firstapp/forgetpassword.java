@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class forgetpassword extends AppCompatActivity{
+
+    //prepare necessary components
     Button back,send;
     Intent homepage;
     @Override
@@ -19,6 +21,7 @@ public class forgetpassword extends AppCompatActivity{
         send = findViewById(R.id.send);
     }
 
+    // click and back function
     public void ClickSend(View view){
         Toast.makeText(forgetpassword.this,"Please reset your password by email.",Toast.LENGTH_LONG).show();
     }
